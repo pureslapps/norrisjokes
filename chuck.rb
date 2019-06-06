@@ -1,8 +1,6 @@
-require Chuck_Norris
+require "chuck_norris"
 
 class ChuckJokes
-  attr_accessor :joke,
-  def initialize()
   def help
 
   end
@@ -16,8 +14,10 @@ class ChuckJokes
   end
 
   def random
-    joke = Chuck_Norris::JokeFinder.get_joke
+    joke = ChuckNorris::JokeFinder.get_joke
     puts joke
     end
   end
-end
+
+joke = ChuckJokes.new
+puts joke.random
